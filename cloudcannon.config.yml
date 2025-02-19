@@ -1,0 +1,23 @@
+collections_config:
+  src_pages:
+    path: src/pages
+    name: Src Pages
+    icon: pages
+  pages:
+    path: ''
+    name: Pages
+    icon: wysiwyg
+    disable_url: true
+  src_data:
+    path: src/data
+    name: Src Data
+    icon: chat
+    disable_url: true
+paths:
+  static: public
+  uploads: public/uploads
+timezone: America/Sao_Paulo
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
