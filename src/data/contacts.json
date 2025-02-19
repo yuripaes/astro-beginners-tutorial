@@ -10,5 +10,9 @@
     {
         "name": "Marcos Cosby",
         "email": "marcos@noveltycycles.example.com"
+    },
+    {
+        "name": "Yuri Paes",
+        "email": "yuri@noveltycycles.example.com"
     }
 ]
