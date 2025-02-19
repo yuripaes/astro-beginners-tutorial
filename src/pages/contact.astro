@@ -1,0 +1,40 @@
+---
+import contacts from "~/data/contacts.json";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+
+const title = "Contact Novelty Cycles Team";
+const description = "Get in touch with the Novelty Cycles team.";
+---
+
+<BaseLayout title={title} description={description}>
+    <main>
+        <h2>Reach out to the team&hellip;</h2>
+        <ul>
+            {
+                contacts.map(({ email, name }) => (
+                    <li>
+                        <p class="name">{name}</p>
+                        <p>
+                            <a href={`mailto:${email}`}>{email}</a>
+                        </p>
+                    </li>
+                ))
+            }
+        </ul>
+    </main>
+</BaseLayout>
+
+<style>
+    ul {
+        list-style-type: none;
+    }
+    
+    li {
+        margin-bottom: var(--spacing-6);
+    }
+
+    .name {
+        font-size: var(--font-size-2);
+        font-weight: var(--font-weight-bold);
+    }
+</style>

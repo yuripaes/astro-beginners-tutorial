@@ -1,0 +1,38 @@
+---
+import Menu from "~/components/Menu";
+import "~/styles/global.css";
+
+export interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description }: Props = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" crossorigin="use-credentials" href="/manifest.json" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+    </head>
+    <header>
+        <div class="header-wrapper">
+            <h1><a href="/">Novelty Cycles</a></h1>
+            <Menu client:load />
+        </div>
+    </header>
+    <body>
+        <slot />
+    </body>
+    <footer>
+        <div class="footer-wrapper">
+            <a href="/about">About Novelty Cycles</a>
+        </div>
+    </footer>
+</html>
