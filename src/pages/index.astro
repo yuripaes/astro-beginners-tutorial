@@ -1,13 +1,69 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 
 const title = "Novelty Cycles Home";
 const description = "Novelty cycles home page, step in and explore our world.";
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
 ---
 
 <BaseLayout title={title} description={description}>
 	<main>
 		<h2>Who are we?</h2>
 		<p>We are Novelty Cycles.</p>
+		<h2>Our recent blog posts</h2>
+		<ul>
+			{
+				posts.map(({ data: { title, description, date }, id }) => (
+					<a href={id}>
+						<li>
+							<h3>{title}</h3>
+							<p class="description">{description}</p>
+							<p>
+								{new Date(date).toLocaleDateString("en", {dateStyle: "short"})}
+							</p>
+						</li>
+					</a>
+				))
+			}
+		</ul>
 	</main>
 </BaseLayout>
+
+<style>
+	ul {
+		list-style-type: none;
+	}
+	
+	ul a {
+		text-decoration: none;
+		color: inherit;
+	}
+	
+	li {
+		padding: var(--spacing-2) var(--spacing-4) var(--spacing-4);
+		border-radius: var(--spacing-1)
+	}
+	
+	a .description {
+		color: var(--colour-brand);
+		text-decoration: underline;
+	}
+	
+	li:focus,
+	li:hover {
+		background-color: var(--colour-theme-tint-80);
+	}
+
+	h3 {
+		margin-block: var(--spacing-2);
+	}
+
+	p {
+		font-size: var(--font-size-2);
+	}
+</style>

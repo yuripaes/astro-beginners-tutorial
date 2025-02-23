@@ -5,7 +5,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 // 3. Define your collection(s)
-const blog = defineCollection({ 
+const blogCollection = defineCollection({ 
     loader: glob({
         pattern: '**/*.md',
         base: './src/content/blog',
@@ -19,4 +19,6 @@ const blog = defineCollection({
  });
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { blog };
+export const collections = { 
+    'blog': blogCollection,
+};
