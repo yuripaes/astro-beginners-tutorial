@@ -20,7 +20,7 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
   Blog:
-    path: content/blog
+    path: src/content/blog
     glob:
     name: blog
     singular_name:
@@ -29,7 +29,7 @@ collections_config:
     disable_url: false
     include_developer_files:
     documentation:
-    description:
+    description: ''
     preview:
     sort:
     sort_options:
