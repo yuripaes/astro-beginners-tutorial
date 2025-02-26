@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import Sample from "~/components/sample/Sample.astro";
 import BaseLayout from "~/layouts/BaseLayout.astro";
 
 const title = "Novelty Cycles Home";
@@ -17,7 +16,6 @@ const posts = (await getCollection("blog")).sort(
 		<h2>Who are we?</h2>
 		<p>We are Novelty Cycles.</p>
 		<h2>Our recent blog posts</h2>
-		<Sample bookshop:live text="This is a bookshop sample component" />
 		<ul>
 			{
 				posts.map(({ data: { title, description, date }, id }) => (
