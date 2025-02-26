@@ -16,5 +16,10 @@
     "astro": "^5.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@bookshop/astro-engine": "3.13.1",
+    "@bookshop/browser": "3.13.1",
+    "@bookshop/generate": "3.13.1"
   }
 }
