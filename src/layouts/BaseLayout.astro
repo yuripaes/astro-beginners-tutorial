@@ -20,6 +20,12 @@ const { title, description }: Props = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <link
+            rel="alternate"
+            title="Novelty Cycles Blog Posts"
+            type="application/rss+xml"
+            href="/rss.xml"
+        />
     </head>
     <header>
         <div class="header-wrapper">
