@@ -1,3 +1,10 @@
-<div class="c-sample">
-    <p>{ Astro.props.text }</p>
+---
+interface Props {
+    text: string;
+}
+
+const { text }: Props = Astro.props;
+---
+<div class="text-center">
+    <p>{ text }</p>
 </div>

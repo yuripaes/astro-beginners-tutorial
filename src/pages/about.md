@@ -1,6 +1,3 @@
----
-import Sample from "~/components/sample/Sample.astro";
----
+## About
 
-## Hello
-<Sample bookshop:live text="This is a bookshop sample component" />
+This is the about page.
