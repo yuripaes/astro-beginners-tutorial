@@ -54,6 +54,33 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+  sample:
+    path: src/content/sample
+    glob:
+    name:
+    singular_name:
+    icon: notes
+    url:
+    disable_url: false
+    include_developer_files:
+    documentation:
+    description:
+    preview:
+    sort:
+    sort_options:
+    _editables:
+    _enabled_editors:
+    _inputs:
+    _select_data:
+    _structures:
+    add_options:
+    create:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    new_preview_url:
+    schemas:
+    schema_key:
 timezone: America/Sao_Paulo
 markdown:
   engine: commonmark
