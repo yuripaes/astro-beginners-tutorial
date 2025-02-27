@@ -1,10 +1,10 @@
 ---
 interface Props {
-    text: string;
+    paragraph: string;
 }
 
-const { text }: Props = Astro.props;
+const { paragraph } = Astro.props;
 ---
 <div class="text-center">
-    <p>{ text }</p>
+    <p>{ paragraph }</p>
 </div>
